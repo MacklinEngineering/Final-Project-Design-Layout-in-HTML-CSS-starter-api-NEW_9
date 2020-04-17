@@ -405,13 +405,28 @@
   .sticky-wrapper .shrink {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
-#bodyIndexPage, #bodySignupPage, #bodyLoginPage {
+#bodyIndexPage {
   /* background-image: url("/public/images/hero_1.jpg"); */
   background-image: url("https://images.pexels.com/photos/325521/pexels-photo-325521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-size: 1000px 500px;
-  background-position: top;
-  /* background-repeat: no-repeat; */
+  /* background-size: 900px 500px; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 150px;
   font-family: 'Advent Pro', sans-serif;
+}
+
+#loginH1, #signUpH1{
+  color: white;
+}
+
+#bodyLoginPage, #bodySignupPage{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 320px;
+  color: white;
+  background-image: url("https://images.pexels.com/photos/325521/pexels-photo-325521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 #indexH1{
@@ -421,19 +436,36 @@
   font-weight: bold;
 }
 #indexH1{
-  margin-top: 170px;
+  padding-top: 170px;
   margin-bottom: 0px;
 }
 .btn-default{
 /* margin-left: 30px; */
 text-decoration: none;
-margin-right: 30px;
+margin-right: 100px;
 color: white;
+font-size: 30px;
+text-align: center;
 
 }
 
 #indexLeftbutton{
-  margin-left: 400px;
+  margin-left: 600px;;
+}
+
+#listingsH1{
+  margin-left: 0;
+}
+
+/* #searchItemButton{
+  margin-left: 250px;
+} */
+
+/* #keywords{
+  margin-left: 300px;
+} */
+#listingsDownArrow{
+
 }
 body {
   font-weight: 400;
@@ -571,12 +603,12 @@ h1, h2, h3, h4 {
   .home-section .scroll-button {
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: 230px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: #fff;
-    left: 50%;
+    left: 48%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);

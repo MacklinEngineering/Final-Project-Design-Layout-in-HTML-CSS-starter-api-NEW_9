@@ -38,25 +38,25 @@ module.exports = function (app, passport, db) {
     res.render('about.ejs');
   })
 
-  // This code is altered from Socket.io's chat box tutorial
-  app.get('/chat', function (req, res) {
-    const id = req.query.id
-    console.log("chat job id:", id)
-
-    db.collection('Listings').findOne({
-      _id: ObjectId(id)
-    },(err, result) => {  //Find all posts then turn to array
-    //   if (err) return console.log(err)
-    console.log("Chat Find One Listing",result)
-      // res.render('job-listings.ejs',{
-      //   Listing: result
-      // })
-      res.render('chat.ejs', {
-        Listing: result,
-        email: req.user.local.email
-      });
-    })
-  });
+  // // This code is altered from Socket.io's chat box tutorial
+  // app.get('/chat', function (req, res) {
+  //   const id = req.query.id
+  //   console.log("chat job id:", id)
+  //
+  //   db.collection('Listings').findOne({
+  //     _id: ObjectId(id)
+  //   },(err, result) => {  //Find all posts then turn to array
+  //   //   if (err) return console.log(err)
+  //   console.log("Chat Find One Listing",result)
+  //     // res.render('job-listings.ejs',{
+  //     //   Listing: result
+  //     // })
+  //     res.render('chat.ejs', {
+  //       Listing: result,
+  //       email: req.user.local.email
+  //     });
+  //   })
+  // });
 
 
   app.get('/job-listings', function (req, res) {
